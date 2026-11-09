@@ -53,6 +53,69 @@
 .au-adc dd{margin:2px 0 0;color:var(--st-ink)}
 .au-adc .au-lnk{font-size:15px}
 .au-adn{margin:22px 0 0;font-size:14.5px;line-height:1.55;color:var(--st-ink2);max-width:86ch}
+/* DUO:START — two ads, two flows, side by side (the same page in two iframes, ?embed&ad=…) */
+.au-duo-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--st-hair);border-radius:24px;overflow:hidden;margin-top:clamp(36px,5vw,56px)}
+.au-duo-stats > div{background:var(--st-card);padding:22px 24px}
+.au-duo-stats b{display:block;font-size:clamp(30px,3.6vw,40px);font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--st-accent);font-variant-numeric:tabular-nums}
+.au-duo-stats span{display:block;margin-top:8px;font-size:14.5px;line-height:1.4;color:var(--st-ink2)}
+.au-duo-h{margin:clamp(44px,6vw,72px) 0 0;text-align:center}
+.au-duo-h h3{margin:0;font-size:clamp(24px,2.8vw,32px);letter-spacing:-.025em;line-height:1.15}
+.au-duo-h p{margin:10px auto 0;max-width:62ch;font-size:16px;line-height:1.5;color:var(--st-ink2)}
+.au-duo{display:grid;grid-template-columns:minmax(0,1fr) auto auto minmax(0,1fr);gap:26px;align-items:start;margin-top:28px;width:min(1320px,calc(100vw - 44px));margin-left:50%;transform:translateX(-50%)}
+.au-duo-card{background:var(--st-card);border-radius:22px;padding:16px;border:2px solid var(--au-ring);align-self:center}
+.au-duo-card img{width:100%;max-height:300px;object-fit:cover;border-radius:14px;display:block}
+.au-duo-card .au-adk{margin:12px 0 0;font-size:12px;font-weight:600;color:var(--au-ring);text-transform:uppercase;letter-spacing:.05em}
+.au-duo-card blockquote{margin:6px 0 0;font-size:16px;line-height:1.3;font-weight:600;letter-spacing:-.01em}
+.au-duo-card .au-adh{margin:8px 0 0;font-size:13px;line-height:1.4;color:var(--st-ink3)}
+.au-duo-a{--au-ring:var(--st-accent)}
+.au-duo-b{--au-ring:var(--st-ink2)}
+.au-duo-ph{width:304px}
+.au-duo-fr{position:relative;width:304px;height:658px;border-radius:44px;box-shadow:0 0 0 3px var(--au-ring),0 30px 70px rgba(0,0,0,.18);background:#0b0d10;overflow:hidden}
+.au-duo-fr iframe{position:absolute;top:0;left:0;width:390px;height:844px;border:0;transform:scale(.7795);transform-origin:0 0;background:transparent}
+.au-duo-fr .au-duo-ld{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.6);font-size:14px}
+.au-duo-cap{margin-top:14px;min-height:76px;font-size:14px;line-height:1.45;color:var(--st-ink2)}
+.au-duo-cap .au-duo-k{display:block;font-size:12px;font-weight:600;color:var(--au-ring);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.au-duo-cap.au-same{color:var(--st-ink3)}
+.au-duo-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px}
+.au-duo-steps button{position:relative;border:1px solid var(--st-hair);background:var(--st-card);color:var(--st-ink);border-radius:980px;padding:8px 15px;font:inherit;font-size:14px;cursor:pointer}
+.au-duo-steps button.on{background:var(--st-ink);color:#fff;border-color:var(--st-ink)}
+.au-duo-steps button.au-diff::after{content:"";position:absolute;top:-2px;right:-2px;width:9px;height:9px;border-radius:50%;background:var(--st-accent);border:2px solid var(--st-bg,#fff)}
+.au-duo-hint{text-align:center;margin:10px 0 0;font-size:13px;color:var(--st-ink3)}
+.au-duo-tog{display:none;justify-content:center;gap:8px;margin-top:20px}
+.au-duo-tog button{border:1px solid var(--st-hair);background:var(--st-card);border-radius:980px;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer;color:var(--st-ink)}
+.au-duo-tog button.on{background:var(--st-ink);color:#fff;border-color:var(--st-ink)}
+.au-duo-tbl{width:100%;border-collapse:collapse;margin-top:clamp(40px,5vw,60px);font-size:15px;line-height:1.45}
+.au-duo-tbl caption{text-align:left;font-size:clamp(22px,2.4vw,28px);font-weight:700;letter-spacing:-.02em;padding-bottom:6px}
+.au-duo-tbl caption span{display:block;font-size:15px;font-weight:400;letter-spacing:0;color:var(--st-ink2);margin-top:6px}
+.au-duo-tbl th,.au-duo-tbl td{text-align:left;vertical-align:top;padding:14px 12px;border-bottom:1px solid var(--st-hair)}
+.au-duo-tbl thead th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--st-ink3);font-weight:600}
+.au-duo-tbl tbody th{font-weight:600;white-space:nowrap;width:1%}
+.au-duo-tbl tbody th button{border:0;background:none;padding:0;font:inherit;font-weight:600;color:var(--st-link);cursor:pointer}
+.au-duo-next{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:clamp(36px,5vw,56px)}
+.au-duo-next > div{background:var(--st-card);border-radius:22px;padding:20px 22px}
+.au-duo-next b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--st-accent)}
+.au-duo-next h4{margin:6px 0 0;font-size:18px;letter-spacing:-.015em}
+.au-duo-next p{margin:6px 0 0;font-size:14.5px;line-height:1.5;color:var(--st-ink2)}
+@media (max-width:1180px){
+  .au-duo{grid-template-columns:auto auto;justify-content:center}
+  .au-duo-card{grid-row:1;align-self:stretch;max-width:304px}
+  .au-duo-card img{max-height:150px}
+}
+@media (max-width:760px){
+  .au-duo{grid-template-columns:auto}
+  .au-duo-card{display:none}
+  .au-duo-tog{display:flex}
+  .au-duo[data-one="a"] .au-duo-ph.au-duo-b,.au-duo[data-one="b"] .au-duo-ph.au-duo-a{display:none}
+  .au-duo-stats,.au-duo-next{grid-template-columns:1fr}
+  .au-duo-tbl tbody th{white-space:normal}
+}
+@media (max-width:360px){.au-duo-ph,.au-duo-fr{width:272px}.au-duo-fr{height:589px}.au-duo-fr iframe{transform:scale(.6975)}}
+html.au-embed,html.au-embed body{background:transparent!important;overflow:hidden;height:100%}
+html.au-embed body *{visibility:hidden}
+html.au-embed .phone,html.au-embed .phone *{visibility:visible}
+html.au-embed .phone{position:fixed;top:0;left:0;margin:0;z-index:99;box-shadow:none;max-width:none}
+html.appmode #ads,html.tourmode #ads{display:none!important}
+/* DUO:END */
 @media (max-width:860px){.au-ads{grid-template-columns:1fr}}
 @media (max-width:480px){.au-adc{grid-template-columns:92px 1fr;gap:16px;padding:18px}.au-adc img{width:92px;height:164px}}
 
@@ -583,47 +646,32 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
 </section>
 
 <section class="au-sec au-adsec" id="ads">
-  <div class="au-wrap">
+  <div class="au-wrap" id="duo">
     <div class="au-split">
       <div>
         <p class="au-kicker">Your ads × your flow</p>
-        <h2 class="au-h2">Keep the promise the ad made. <span>Two of your Meta ads, two first screens.</span></h2>
+        <h2 class="au-h2">Keep the promise the ad made. <span>Two of your Meta ads, two flows, side by side.</span></h2>
       </div>
       <div>
-        <p>Your Meta ads that link to this app each sell one thing: swap an outfit, turn a photo into a video, a family photoshoot. In the flow we have on record, every one of those installs meets the same start: a sign-up screen, then a paywall about <b>“Better designs in less time”</b> over sneaker mockups.</p>
-        <p>Flow Builder can open a different flow by where the install came from, so the first screens repeat what the ad promised, and each ad is judged on the subscriptions it brings, not the installs.</p>
+        <p>Your Meta ads that link to this app each sell one thing: swap an outfit, turn a photo into a video, a family photoshoot. In the flow we have on record, every one of those installs meets the same start: a sign-up screen, then a paywall about <b>“Better designs in less time”</b> over sneaker mockups.</p><p>Flow Builder can open a different flow by where the install came from, so the first screens repeat what the ad promised, and each ad is judged on the subscriptions it brings, not the installs.</p>
       </div>
     </div>
-    <div class="au-ads">
-      <article class="au-adc">
-        <img src="assets/ads/outfit-frame.jpg" alt="A frame from the ad">
-        <div>
-          <p class="au-adk">Ad 1 · running since 23 Sep 2026</p>
-          <blockquote>“Swap your outfit in seconds with Picsart AI ✨”</blockquote>
-          <p class="au-adh">Headline: Swap Any Outfit ✨ · Free trial • 150M+ creators</p>
-          <dl>
-            <dt>Welcome</dt><dd>“Swap any outfit in seconds”, over the look from the ad</dd>
-            <dt>First answer offered</dt><dd>“Try on a new outfit”, which opens AI try on</dd>
-          </dl>
-          <button type="button" class="au-lnk" onclick="seeAd('outfit')">Open the flow from this ad</button>
-        </div>
-      </article>
-      <article class="au-adc">
-        <img src="assets/ads/aivideo-frame.jpg" alt="A frame from the ad">
-        <div>
-          <p class="au-adk">Ad 2 · running since 23 Sep 2026</p>
-          <blockquote>“Turn one photo into a scroll-stopping AI video — no editing skills ✨”</blockquote>
-          <p class="au-adh">Headline: Photo → AI Video ✨ · Free to try • 150M+ creators</p>
-          <dl>
-            <dt>Welcome</dt><dd>“Turn one photo into an AI video”</dd>
-            <dt>First answer offered</dt><dd>“Turn a photo into a video”, which opens AI video</dd>
-          </dl>
-          <button type="button" class="au-lnk" onclick="seeAd('video')">Open the flow from this ad</button>
-        </div>
-      </article>
+    <div class="au-duo-stats"><div><b>2</b><span>of your Meta ads link to this app; your other Meta ads go to the web</span></div><div><b>40%</b><span>your Apple Ads share of voice on “picsart”, US</span></div><div><b>58%</b><span>your share of voice on “cutout”, US</span></div></div>
+    <div class="au-duo-h"><h3>Two ads, two flows</h3><p>Left, someone who tapped “Swap Any Outfit”. Right, someone who tapped “Photo → AI Video”. Both phones run the whole flow with all five ideas; what changes is the tool the ad promised.</p></div>
+    <div class="au-duo-tog" role="group" aria-label="Which ad"><button type="button" data-duoone="a" class=on>Ad 1 · Swap any outfit</button><button type="button" data-duoone="b">Ad 2 · Photo → AI video</button></div>
+    <div class="au-duo" id="duoStage" data-one="a">
+      <figure class="au-duo-card au-duo-a"><img src="assets/ads/outfit-frame.jpg" alt="A frame from the ad"><p class="au-adk">Ad 1 · Meta · Swap any outfit</p><blockquote>“Swap your outfit in seconds with Picsart AI ✨”</blockquote><p class="au-adh">Headline: Swap Any Outfit ✨ · Free trial • 150M+ creators</p></figure>
+      <div class="au-duo-ph au-duo-a"><div class="au-duo-fr" id="duoFra"><div class="au-duo-ld">Loading the flow…</div></div><p class="au-duo-cap" id="duoCapa"></p></div>
+      <div class="au-duo-ph au-duo-b"><div class="au-duo-fr" id="duoFrb"><div class="au-duo-ld">Loading the flow…</div></div><p class="au-duo-cap" id="duoCapb"></p></div>
+      <figure class="au-duo-card au-duo-b"><img src="assets/ads/aivideo-frame.jpg" alt="A frame from the ad"><p class="au-adk">Ad 2 · Meta · Photo → AI video</p><blockquote>“Turn one photo into a scroll-stopping AI video — no editing skills ✨”</blockquote><p class="au-adh">Headline: Photo → AI Video ✨ · Free to try • 150M+ creators</p></figure>
     </div>
+    <div class="au-duo-steps" id="duoSteps" aria-label="Steps, in both phones"></div>
+    <p class="au-duo-hint">Tap through either phone and the other follows. A dot marks the screens that differ by ad.</p>
+    <table class="au-duo-tbl" id="duoTbl"></table>
+    <div class="au-duo-next"><div><b>Day 1</b><h4>Your name, checked</h4><p>You show on 40% of US Apple Ads searches for “picsart”. Check who shows first on the rest, and take the top slot back.</p></div><div><b>Week 1</b><h4>Two ad flows live</h4><p>After a one-time SDK setup, each ad opens its own flow, set by where the install came from. No app release.</p></div><div><b>Week 2</b><h4>A/B tests per ad</h4><p>Each ad flow against one flow for everyone, measured on subscriptions, not installs. Then the family photoshoot ad gets its own first screen.</p></div></div>
     <p class="au-adn">Both ads link to the App Store, to this app. Other Meta ads of yours go to the web: several to your web funnel on picsart.fnlfx.com, and the AI Playground, Flow and MCP ads to picsart.com. On Apple Ads, in the US data we see for 9 Oct – 9 Nov, you show on 40% of searches for “picsart”, so the rest go to other apps, and you also bid on “photo” (37%), “cutout” (58%) and two Canva names (1%). These figures are for your account; we can’t tell which of your apps each ad was for. This layer carries no range: only a test per ad can give one.</p>
   </div>
+  <script type="application/json" id="duoData">{"flows": [{"k": "a", "ad": "outfit", "label": "Ad 1 · Swap any outfit"}, {"k": "b", "ad": "video", "label": "Ad 2 · Photo → AI video"}], "rows": [{"id": "ad", "h": "Meta ad", "a": "“Swap your outfit in seconds with Picsart AI ✨” · Swap Any Outfit ✨", "b": "“Turn one photo into a scroll-stopping AI video — no editing skills ✨” · Photo → AI Video ✨"}, {"id": "welcome", "h": "Welcome", "a": "“Swap any outfit in seconds”, over the look from the ad.", "b": "“Turn one photo into an AI video”."}, {"id": "goal", "h": "What to make", "a": "“Try on a new outfit” listed first and picked.", "b": "“Turn a photo into a video” listed first and picked."}, {"id": "make", "h": "Make it", "a": "AI Try On on a sample photo, then “Your new look is ready”.", "b": "AI Video on a sample photo, then “Your AI video is ready”."}, {"id": "signup", "h": "Sign-up", "a": "“Save your new look to Picsart”.", "b": "“Save your AI video to Picsart”."}, {"id": "paywall", "h": "Paywall", "a": "“Keep swapping outfits with Pro. Try Pro free for 7 days.”", "b": "“Keep turning photos into AI videos with Pro. Try Pro free for 7 days.”"}], "tableTitle": "The same app, answering two different ads.", "tableSub": "The five ideas sit underneath both. Only these screens change with the ad they saw; each row opens that screen in both phones."}</script>
 </section>
 
 <section class="au-sec au-white" id="prototype">
@@ -1734,6 +1782,95 @@ function tourInit(){
   if (scr[h] && !SHOT && !document.documentElement.classList.contains('appmode')) setTimeout(function(){ $('prototype').scrollIntoView(); }, 0);
   if (/[?&]tour\b/.test(Q) && C.tour) tourInit();
 })();
+</script>
+<script>
+/* DUO:START — two ads, two flows. Inside an iframe (?embed&ad=…) the page shows only its phone; the parent
+   builds the two iframes, sets each one's ad by clicking its own [data-pick="ad:…"] switch, and keeps them on
+   the same step: tap through either phone and the other follows. Generic: all words live in #duoData. */
+(function(){
+  var Q = location.search, H = document.documentElement;
+  if (/[?&]embed\b/.test(Q)) {
+    H.classList.add('au-embed');
+    var m = /[?&]ad=(\w+)/.exec(Q), b = m && document.querySelector('[data-pick="ad:' + m[1] + '"]');
+    if (b) b.click();
+    /* the in-phone ad switch belongs to the one-phone prototype; here each phone is one ad */
+    document.querySelectorAll('.phone [data-pick^="ad:"]').forEach(function(x){ x.parentNode.style.display = 'none'; });
+    jump(ORDER[0]);
+    return;
+  }
+  var root = document.getElementById('duo'), dataEl = document.getElementById('duoData');
+  if (!root || !dataEl || /[?&](shot|phone|tour|hero|app)\b/.test(Q) || H.classList.contains('appmode')) return;
+  var D = JSON.parse(dataEl.textContent), F = D.flows, W = [], busy = false, curId = null;
+  var rows = {}; D.rows.forEach(function(r){ rows[r.id] = r; });
+  var steps = document.getElementById('duoSteps'), tbl = document.getElementById('duoTbl');
+
+  function cw(i){ return W[i] && W[i].contentWindow && W[i].contentWindow.jump ? W[i].contentWindow : null; }
+  function label(id){ var w = cw(0); return (w && w.C.chips && w.C.chips[id]) || id; }
+  function paintStep(id){
+    curId = id;
+    steps.querySelectorAll('button').forEach(function(b){ b.classList.toggle('on', b.dataset.id === id); });
+    F.forEach(function(f, i){
+      var cap = document.getElementById('duoCap' + f.k), r = rows[id];
+      cap.classList.toggle('au-same', !r);
+      cap.innerHTML = r ? '<span class="au-duo-k">' + f.label + ' · ' + label(id) + '</span>' + r[f.k]
+                        : '<span class="au-duo-k">' + label(id) + '</span>Same screen for both ads.';
+    });
+  }
+  function both(id){ busy = true; F.forEach(function(f, i){ var w = cw(i); if (w && w.cur !== id) w.jump(id); }); busy = false; paintStep(id); }
+  function follow(i, id){
+    if (busy) return;
+    busy = true; F.forEach(function(f, j){ var w = cw(j); if (j !== i && w && w.cur !== id) w.jump(id); }); busy = false;
+    paintStep(id);
+  }
+  function ready(i){
+    var w = cw(i); if (!w) return;
+    var orig = w.onEnter;
+    w.onEnter = function(id, S){ if (orig) orig(id, S); follow(i, id); };
+    if (window.S && window.S.lang && w.S.lang !== window.S.lang) w.setLang(window.S.lang);
+    var ld = W[i].parentNode.querySelector('.au-duo-ld'); if (ld) ld.remove();
+    if (!steps.childElementCount) {
+      w.ORDER.forEach(function(id){
+        var b = document.createElement('button'); b.type = 'button'; b.dataset.id = id; b.textContent = label(id);
+        if (rows[id]) { b.classList.add('au-diff'); b.title = 'Differs by ad'; }
+        b.onclick = function(){ both(id); }; steps.appendChild(b);
+      });
+      paintStep(w.cur);
+    }
+  }
+  function build(){
+    if (W.length) return;
+    F.forEach(function(f, i){
+      var box = document.getElementById('duoFr' + f.k), fr = document.createElement('iframe');
+      fr.title = f.label + ': the flow from this ad';
+      fr.setAttribute('loading', 'eager');
+      fr.src = location.pathname + '?embed&ad=' + encodeURIComponent(f.ad);
+      fr.onload = function(){ setTimeout(function(){ ready(i); }, 50); };
+      box.appendChild(fr); W[i] = fr;
+    });
+  }
+  /* the table: one row per step that differs; a click opens that step in both phones */
+  var h = '<caption>' + D.tableTitle + '<span>' + D.tableSub + '</span></caption><thead><tr><th>Screen</th>' +
+          F.map(function(f){ return '<th>' + f.label + '</th>'; }).join('') + '</tr></thead><tbody>';
+  D.rows.forEach(function(r){
+    h += '<tr><th><button type="button" data-duo="' + r.id + '">' + r.h + '</button></th>' + F.map(function(f){ return '<td>' + r[f.k] + '</td>'; }).join('') + '</tr>';
+  });
+  tbl.innerHTML = h + '</tbody>';
+  root.addEventListener('click', function(e){
+    var b = e.target.closest('[data-duo]');
+    if (b) { both(b.dataset.duo); document.getElementById('duoStage').scrollIntoView({behavior: 'smooth', block: 'center'}); }
+    var t = e.target.closest('[data-duoone]');
+    if (t) { document.getElementById('duoStage').dataset.one = t.dataset.duoone; root.querySelectorAll('[data-duoone]').forEach(function(x){ x.classList.toggle('on', x === t); }); }
+  });
+  /* keep the two phones in the page's language */
+  var ol = window.onLang;
+  window.onLang = function(l){ if (ol) ol(l); W.forEach(function(fr, i){ var w = cw(i); if (w && w.S.lang !== l) w.setLang(l); }); };
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){ if (es.some(function(e){ return e.isIntersecting; })) { io.disconnect(); build(); } }, {rootMargin: '900px 0px'});
+    io.observe(document.getElementById('duoStage'));
+  } else build();
+  setTimeout(build, 2500);   /* a hidden or never-scrolled tab still gets its phones */
+})();
+/* DUO:END */
 </script>
 </body>
 </html>
